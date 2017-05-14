@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'nokogiri'
+gem 'cucumber'
+gem 'rspec'
+gem 'capybara'
+gem 'selenium-webdriver'
+gem 'ffi'
+gem 'pry'
+gem 'watir'
+gem 'watir-webdriver'
+gem 'poltergeist'
