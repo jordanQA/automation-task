@@ -6,7 +6,6 @@ require 'pry'
 require_relative 'selectors'
 require_relative 'wait_for_ajax'
 
-# ENV['RAILS_ENV'] ||= 'test'
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 Capybara.default_max_wait_time = 20
@@ -25,6 +24,7 @@ Capybara.javascript_driver = :chrome
 #
 # Capybara.default_driver = :poltergeist
 # Capybara.javascript_driver = :poltergeist
+
 RSpec.configure do |config|
   config.include WaitForAjax, type: :feature
 end
