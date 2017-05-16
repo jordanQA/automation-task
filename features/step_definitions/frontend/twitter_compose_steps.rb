@@ -64,10 +64,9 @@ Then(/^I should( not)? see my tweet$/) do |negate|
   step 'I go to messages'
   if negate
     expect(page).not_to have_content tweet[:text]
-    # expect(page).not_to have_xpath("//span[text()='#{tweet[:text]}']")
   else
     first_tweet = find(:xpath, '(//article[*[contains(@class, "message-text")]])[1]')
-
+    
     within first_tweet do
       expect(find('.js-toggle-message-text').text).to eq(tweet[:text])
     end
